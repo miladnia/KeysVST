@@ -1,0 +1,196 @@
+/* ----- FONTS ----- */
+
+@font-face {
+	font-family: "DSDIGI";
+	src: url("./fonts/DSDIGI.eot");
+    src: local("DSDIGI"),
+    url("./fonts/DSDIGI.woff") format("woff"),
+    url("./fonts/DSDIGI.ttf") format("truetype");
+}
+
+/* ----- keys-vst-body ----- */
+
+.keys-vst-body {
+    display: inline-block;
+    position: relative;
+    min-width: 600px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #455A64;
+    text-align: center;
+    overflow: hidden;
+}
+
+.keys-vst-body[data-state="loading"]::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    content: "";
+    z-index: 100;
+}
+
+/* ----- keys-vst-label ----- */
+
+.keys-vst-label {
+    position: absolute;
+    padding: 5px 10px;
+    top: 10px;
+    left: 10px;
+    border-radius: 3px;
+    background: #455A64;
+    box-shadow: 0 0 10px #37474F inset;
+    color: #90A4AE;
+    font-family: tahoma, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    z-index: 100;
+}
+
+/* ----- keys-vst-panel ----- */
+
+.keys-vst-panel {
+    position: relative;
+    padding: 25px 0;
+    background-image: linear-gradient(#263238, #37474F, #37474F);
+    box-shadow: 0 0 5px #000;
+    z-index: 2;
+}
+
+/* ----- keys-vst-monitor ----- */
+
+.keys-vst-monitor {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    padding: 8px 5px;
+    margin: 0 10px;
+    border-radius: 8px;
+    background-image: radial-gradient(#F5F5F5, #B0BEC5);
+    box-shadow: 0 0 10px #607D8B inset;
+    color: #263238;
+    font-family: DSDIGI, sans-serif;
+    text-transform: uppercase;
+}
+.keys-vst-monitor-status {
+    font-size: 1.3em;
+    font-weight: bold;
+    opacity: 0.75;
+}
+.keys-vst-monitor-note {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+/* ----- keys-vst-keyboard ----- */
+
+.keys-vst-keyboard {
+    position: relative;
+    width: 845px;
+    min-width: 95%;
+    max-width: 95%;
+    height: 250px;
+    padding-bottom: 3px;
+    margin: 0 2.5%;
+    border-radius: 0 0 5px 5px;
+    background: #E0E0E0;
+    box-shadow: 0 -5px 5px 4px #546E7A inset, 0 0px 0 4px #546E7A;
+    list-style: none;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.keys-vst-octave {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.keys-vst-octave:first-child {
+    text-align: right;
+}
+.keys-vst-octave:last-child {
+    text-align: left;
+}
+.keys-vst-key {
+    display: inline-block;
+    width: 13.5%;
+    height: 100%;
+    border-radius: 0 0 5px 5px;
+}
+.keys-vst-key[data-type="w"] {
+    width: calc(14.28% - 2px);
+    margin: 0 1px;
+    background-color: #F5F5F5;
+    box-shadow: 0 -2px 0 2px #9E9E9E inset;
+    background-image: linear-gradient(#E0E0E0, transparent, transparent);
+}
+.keys-vst-key[data-type="b"] {
+    position: absolute;
+    width: 12.5%;
+    height: 70%;
+    margin-left: -6.25%;
+    border-radius: 0 0 12px 12px;
+    background-color: #000000;
+    box-shadow: 0 -15px 15px #000 inset;
+    background-image: linear-gradient(transparent, #212121);
+}
+.keys-vst-key[data-pressed="true"] {
+    transition: background-color 0.5s;
+}
+.keys-vst-key[data-pressed="false"] {
+    transition: background-color 2.5s;
+}
+.keys-vst-key[data-type="w"][data-pressed="true"] {
+    background-color: #81D4FA;
+}
+.keys-vst-key[data-type="b"][data-pressed="true"] {
+    background-color: #757575;
+}
+
+/* ----- keys-vst-keyboard:resize ----- */
+
+.keys-vst-keyboard[data-octaves="3"] {
+    width: 62vw;
+}
+.keys-vst-keyboard[data-octaves="3"] .keys-vst-octave {
+    width: 33.33%;
+}
+.keys-vst-keyboard[data-octaves="4"] {
+    width: 64vw;
+}
+.keys-vst-keyboard[data-octaves="4"] .keys-vst-octave {
+    width: 25%;
+}
+.keys-vst-keyboard[data-octaves="5"] {
+    width: 66vw;
+}
+.keys-vst-keyboard[data-octaves="5"] .keys-vst-octave {
+    width: 20%;
+}
+.keys-vst-keyboard[data-octaves="6"] {
+    width: 68vw;
+}
+.keys-vst-keyboard[data-octaves="6"] .keys-vst-octave {
+    width: 16.66%;
+}
+.keys-vst-keyboard[data-octaves="9"] {
+    width: 70vw;
+}
+.keys-vst-keyboard[data-octaves="9"] .keys-vst-octave {
+    width: 13.45%;
+}
+.keys-vst-keyboard[data-octaves="9"] .keys-vst-octave:first-child {
+    margin-left: -9.5%;
+}
