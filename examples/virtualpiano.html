@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Piano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../themes/default.css">
+    <script type="text/javascript" src="../KeysVST.js"></script>
+</head>
+<body>
+    <a href="#" class="btn" onclick="startPiano(); return false;" style="font-size: 2.5em;">Start</a><br><br>
+    <script type="text/javascript">
+        function startPiano() {
+            var piano = new KeysVST();
+            piano.run("./samples", function(view) {
+                document.body.appendChild(view);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -2,10 +2,10 @@
 
 @font-face {
 	font-family: "DSDIGI";
-	src: url("./fonts/DSDIGI.eot");
+	src: url("./DSDIGI.eot");
     src: local("DSDIGI"),
-    url("./fonts/DSDIGI.woff") format("woff"),
-    url("./fonts/DSDIGI.ttf") format("truetype");
+    url("./DSDIGI.woff") format("woff"),
+    url("./DSDIGI.ttf") format("truetype");
 }
 
 /* ----- keys-vst-body ----- */
