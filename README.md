@@ -1,6 +1,6 @@
 # KeysVST
 
-A simple web-based, 7-octave, 88-key keyboard VST. This module is part of [Chakavang](https://github.com/chakavang) project.
+A simple web-based, 7-octave, 88-key keyboard VST. This module is part of the Chakavang project.
 
 [![Keys VST Preview](./docs/preview.png)](https://chakavang.github.io/KeysVST/examples/virtualpiano.html)
 
@@ -19,7 +19,7 @@ The source code of a working example is available in `examples/` directory. If y
 
 Try online examples:
 
-- [Virtual Piano](https://chakavang.github.io/KeysVST/examples/virtualpiano.html)
+- [Virtual Piano](https://miladnia.github.io/KeysVST/examples/virtualpiano.html)
 
 ## Keyboard Map
 
