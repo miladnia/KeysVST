@@ -2,11 +2,11 @@
 
 A simple web-based, 7-octave, 88-key keyboard VST. This module is part of the Chakavang project.
 
-[![Keys VST Preview](./docs/preview.png)](https://chakavang.github.io/KeysVST/examples/virtualpiano.html)
+[![Keys VST Preview](./docs/preview.png)](https://miladnia.github.io/KeysVST/examples/virtualpiano.html)
 
 ## How to Run
 
-```
+```JavaScript
 var vst = new KeysVST();
 vst.run("./path/to/samples", function(view) {
     document.body.appendChild(view);
